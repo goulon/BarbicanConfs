@@ -45,3 +45,7 @@ Physical and Logcal Volumes creation
   vgcreate name-volume-group /dev/loop0
 ```
 * Check your volumes with vgs and pvs commands
+* 
+= = = =
+
+Cuidado com o Barbican, tem que rodar com barbican.sh e nao com o barbican-api !
