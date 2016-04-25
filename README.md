@@ -26,19 +26,19 @@ Physical and Logcal Volumes creation
   dd if=/dev/zero of=lvmtest0.img bs=5000 count=1M
 
 2. Link to device::
-3. 
+ 
   losetup /dev/loop0 lvmtest0.img
 
 3. Partition them (type n for new partition and enter default values without typing anything for the other parameters; save with w)::
-4. 
+
   fdisk /dev/loop0
 
 4. Create physical volume::
-5. 
+
   pvcreate /dev/loop0
 
 5. Create logical volume::
-6. 
+
   vgcreate name-volume-group /dev/loop0
 
 6. Check your volumes with vgs and pvs commands
