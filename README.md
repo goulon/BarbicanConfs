@@ -19,6 +19,7 @@ $ nova secgroup-add-rule default icmp -1 -1 0.0.0.0/0
 $ nova secgroup-add-rule default tcp 22 22
 
 = = = =
+
 Physical and Logcal Volumes creation
 # Create empty files
 dd if=/dev/zero of=lvmtest0.img bs=5000 count=1M
