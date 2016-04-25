@@ -15,8 +15,10 @@ Finally, you can try to boot an encrypted server with the nova boot command. Don
 = = = =
 
 Security Group Update
+```
 $ nova secgroup-add-rule default icmp -1 -1 0.0.0.0/0
 $ nova secgroup-add-rule default tcp 22 22
+```
 
 = = = =
 
