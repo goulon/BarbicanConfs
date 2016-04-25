@@ -11,3 +11,9 @@ $ touch .ssh/id_rsa.pub
 $ nova keypair-add --pub-key .ssh/id_rsa.pub admin
 
 Finally, you can try to boot an encrypted server with the nova boot command. Don't forget to include the --key_name parameter.
+
+= = = =
+
+Security Group Update
+$ nova secgroup-add-rule default icmp -1 -1 0.0.0.0/0
+$ nova secgroup-add-rule default tcp 22 22
