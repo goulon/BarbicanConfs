@@ -45,7 +45,36 @@ Physical and Logcal Volumes creation
   vgcreate name-volume-group /dev/loop0
 ```
 * Check your volumes with vgs and pvs commands
-* 
+
 = = = =
 
 Cuidado com o Barbican, tem que rodar com barbican.sh e nao com o barbican-api !
+
+= = = =
+
+Physical and Logcal Volumes deletion
+
+* * Check your volumes with vgs and pvs commands::
+```bash
+  vgs
+  pvs
+```
+* Delete image::
+```bash
+  rm lvmtest0.img
+```
+* Delete volume groups::
+```bash
+  vgremove name-volume-group-1
+  pvremove name-volume-group-1
+```
+* Check and detach your volume::
+```bash
+  losetup -a
+  losetup -d /dev/loop0
+```
+* Look up your disk space ::
+```bash
+  df -h
+```
+* Then you're done
